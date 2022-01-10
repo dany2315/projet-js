@@ -157,7 +157,7 @@ element.innerHTML+=toAppend
 function createHTML(car,i) {
     toAppend+=`<div id="car${i+1}" class="if">
                     <h3 class="cathegorie">${car.cathegorie}</h3>
-                    <div class="image"><img src="C:/Users/David/Desktop/webschool/projet1/assets/image/${car.image}" alt="voiture" ></div>
+                    <div class="image"><img src="C:/Users/David/Desktop/webschool/projet-js/assets/image/${car.image}" alt="voiture" ></div>
                     </br>
                     <p class="marque">${car.marqu}</p>  
                     </br>
