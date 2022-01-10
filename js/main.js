@@ -108,14 +108,16 @@ function createHTML(azerty) {
 }*/
 
 const cars =[
-    {
+    {  
+        plate:1,
         marqu :"FERRARI",
         model :"F8",
         cathegorie:"SPORT",
         price:"400 000 €",
         image:"ferrari.jpg",
     },
-    {
+    {   
+        plate:2,
         marqu:"TESLA",
         model:"model X",
         cathegorie:"FAMILLE",
@@ -123,6 +125,7 @@ const cars =[
         image:"tesla.jpg",
     },
     {
+        plate:3,
         marqu:"MERCEDES BENZ",
         model:"viano",
         cathegorie:"BUISSNES/FAMILLE",
@@ -130,6 +133,7 @@ const cars =[
         image:"mercedes_benz_viano.jpg",
     },
     {
+        plate:4,
         marqu:"ROLL ROYCE",
         model:"cullinan",
         cathegorie:"LUXE",
@@ -137,6 +141,7 @@ const cars =[
         image:"roll_royce.jpg",
     },
     {
+        plate:5,
         marqu:"JAGUAR",
         model:"XJ50",
         cathegorie:"LUXE",
@@ -155,6 +160,7 @@ element.innerHTML+=toAppend
 
 
 function createHTML(car,i) {
+    
     toAppend+=`<div id="car${i+1}" class="if">
                     <h3 class="cathegorie">${car.cathegorie}</h3>
                     <div class="image"><img src="C:/Users/David/Desktop/webschool/projet-js/assets/image/${car.image}" alt="voiture" ></div>
@@ -165,14 +171,17 @@ function createHTML(car,i) {
                     </br>
                     <p class="price">${car.price}</p>
                     </br>
-                    <button class="${car}Delete" onclick="annule(${i+1})">x</button></div>`
+                    <button class="delete${car} close" onclick="annule(${i+1},cars)">x</button></div>`
     
 }
 
-function annule(car) {
+
+function annule(car,arr,) {
     var myDelete =document.getElementById(`car${car}`)
-    car[i+1].remove();
+    myDelete.remove();
+    arr==arr.splice(car-1,1)
+   
 
-    
 }
+
 
