@@ -176,7 +176,7 @@ function createHTML(car,i) {
 }
 
 
-function annule(car,arr,) {
+function annule(car,) {
     var myDelete =document.getElementById(`car${car}`)
     myDelete.remove();
     //arr==arr.splice(car-1,1)
@@ -184,19 +184,26 @@ function annule(car,arr,) {
 }
 
 var cathegorie=["LUXE","BUISSNES","FAMILLE","SPORT"];
-
-
-
+var i =0
     var div=document.createElement("div");
+    cathegorie.forEach(createInput)
+function createInput(cat,i) {
     var input=document.createElement("input");
     input.type="checkbox";
-    input.value=cat;
-    input.toupperCase();
-
-
-
-
+    input.value=cathegorie[i];
+    input.className="check";
     div.appendChild(input);
+}
+
+
+
+
+   
+    
+
+
+
+
 
 
 
