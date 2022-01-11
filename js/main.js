@@ -179,9 +179,26 @@ function createHTML(car,i) {
 function annule(car,arr,) {
     var myDelete =document.getElementById(`car${car}`)
     myDelete.remove();
-    arr==arr.splice(car-1,1)
+    //arr==arr.splice(car-1,1)
    
-
 }
+
+var cathegorie=["LUXE","BUISSNES","FAMILLE","SPORT"];
+
+
+
+    var div=document.createElement("div");
+    var input=document.createElement("input");
+    input.type="checkbox";
+    input.value=cat;
+    input.toupperCase();
+
+
+
+
+    div.appendChild(input);
+
+
+
 
 
