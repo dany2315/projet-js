@@ -112,14 +112,14 @@ const cars =[
         plate:1,
         marqu :"FERRARI",
         model :"F8",
-        cathegorie:"SPORT",
+        cathegorie:["SPORT"],
         price:"400 000 €",
         image:"ferrari.jpg",
     },
     {   
         plate:2,
         marqu:"TESLA",
-        model:"model X",
+        model:["model X"],
         cathegorie:"FAMILLE",
         price:"100 000 €",
         image:"tesla.jpg",
@@ -128,7 +128,7 @@ const cars =[
         plate:3,
         marqu:"MERCEDES BENZ",
         model:"viano",
-        cathegorie:"BUISSNES/FAMILLE",
+        cathegorie:["BUISSNES","FAMILLE"],
         price:"70 000 €",
         image:"mercedes_benz_viano.jpg",
     },
@@ -136,7 +136,7 @@ const cars =[
         plate:4,
         marqu:"ROLL ROYCE",
         model:"cullinan",
-        cathegorie:"LUXE",
+        cathegorie:["LUXE"],
         price:"500 000 €",
         image:"roll_royce.jpg",
     },
@@ -144,7 +144,7 @@ const cars =[
         plate:5,
         marqu:"JAGUAR",
         model:"XJ50",
-        cathegorie:"LUXE",
+        cathegorie:["LUXE"],
         price:"80 000 €",
         image:"jaguar.jpg",
     },
@@ -184,18 +184,45 @@ function annule(car,) {
 }
 
 var cathegorie=["LUXE","BUISSNES","FAMILLE","SPORT"];
-var i =0
-    var div=document.createElement("div");
+var i =0;
     cathegorie.forEach(createInput)
 function createInput(cat,i) {
+    var div=document.getElementById("box")
     var input=document.createElement("input");
     input.type="checkbox";
-    input.value=cathegorie[i];
     input.className="check";
+    input.value=cat
+
+    var label=document.createElement("label")
+    label.className="nom";
+    label.innerText=cat
+    //document.getElementById("Target").innerHTML += "<br>"
+
+    var br=document.createElement("br")
     div.appendChild(input);
+    div.appendChild(label);
+    div.appendChild(br);
+
+  //  document.querySelectorAll(label).innerHTML="</br>";
+  
+
+}
+function searchCathegorie() {
+    var 
+    
 }
 
 
+var search=document.createElement("input");
+search.className="search";
+search.type="text"
+
+var btn=document.createElement("button");
+btn.className="select"
+btn.innerText="selectionner"
+
+document.getElementById("barre").appendChild(search);
+document.getElementById("barre").appendChild(btn);
 
 
    
