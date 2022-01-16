@@ -161,7 +161,7 @@ element.innerHTML+=toAppend
 
 function createHTML(car,i) {
     
-    toAppend+=`<div id="car${i+1}" class="if">
+    toAppend+=`<div id="car${i+1}"  class="if ${car.cathegorie}" >
                     <h3 class="cathegorie">${car.cathegorie}</h3>
                     <div class="image"><img src="C:/Users/David/Desktop/webschool/projet-js/assets/image/${car.image}" alt="voiture" ></div>
                     </br>
@@ -179,7 +179,7 @@ function createHTML(car,i) {
 function annule(car,) {
     var myDelete =document.getElementById(`car${car}`)
     myDelete.remove();
-    //arr==arr.splice(car-1,1)
+    
    
 }
 
@@ -192,6 +192,7 @@ function createInput(cat,i) {
     input.type="checkbox";
     input.className="check";
     input.value=cat
+    input.addEventListener("click",affiche)
 
     var label=document.createElement("label")
     label.className="nom";
@@ -202,37 +203,60 @@ function createInput(cat,i) {
     div.appendChild(input);
     div.appendChild(label);
     div.appendChild(br);
+    
+    
 
   //  document.querySelectorAll(label).innerHTML="</br>";
   
 
 }
-function searchCathegorie() {
-    var 
-    
-}
+function affiche() {
+    cathegorie.forEach(cad)
+    function cad(cat,i) {
+        var voiture =document.getElementsByClassName(`${cat}`)
+        if (voi) {
+            
+        }
+        
+        voiture.style.display="block"
 
+        
+    }
+}
 
 var search=document.createElement("input");
 search.className="search";
-search.type="text"
+search.type="text";
+search.value.toUpperCase();
+
 
 var btn=document.createElement("button");
-btn.className="select"
-btn.innerText="selectionner"
+btn.className="select";
+btn.innerText="selectionner";
+//btn.addEventListener("click",searchCathegorie);
+
 
 document.getElementById("barre").appendChild(search);
 document.getElementById("barre").appendChild(btn);
 
+/*function searchCathegorie() {
+   
+    var valeur = search.value
+    
+    
+    cathegorie.forEach(affiche) //luxe
+    function affiche(cat,i) {   //luxe     1 
+        var voiture = document.getElementById(`${cat}`)
+           
+            if (cat=valeur) {
+                
+            voiture.style.display="block"
+
+            }else
+            voiture.style.display="none"
+    }
+}
+
 
    
-    
-
-
-
-
-
-
-
-
-
+*/
