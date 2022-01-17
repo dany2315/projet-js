@@ -109,7 +109,6 @@ function createHTML(azerty) {
 
 const cars =[
     {  
-        plate:1,
         marqu :"FERRARI",
         model :"F8",
         cathegorie:["SPORT"],
@@ -117,7 +116,6 @@ const cars =[
         image:"ferrari.jpg",
     },
     {   
-        plate:2,
         marqu:"TESLA",
         model:["model X"],
         cathegorie:"FAMILLE",
@@ -125,7 +123,6 @@ const cars =[
         image:"tesla.jpg",
     },
     {
-        plate:3,
         marqu:"MERCEDES BENZ",
         model:"viano",
         cathegorie:["BUISSNES","FAMILLE"],
@@ -133,7 +130,6 @@ const cars =[
         image:"mercedes_benz_viano.jpg",
     },
     {
-        plate:4,
         marqu:"ROLL ROYCE",
         model:"cullinan",
         cathegorie:["LUXE"],
@@ -141,7 +137,6 @@ const cars =[
         image:"roll_royce.jpg",
     },
     {
-        plate:5,
         marqu:"JAGUAR",
         model:"XJ50",
         cathegorie:["LUXE"],
@@ -180,7 +175,6 @@ function annule(car,) {
     var myDelete =document.getElementById(`car${car}`)
     myDelete.remove();
     
-   
 }
 
 var cathegorie=["LUXE","BUISSNES","FAMILLE","SPORT"];
@@ -211,11 +205,12 @@ function createInput(cat,i) {
 
 }
 function affiche() {
-    cathegorie.forEach(cad)
-    function cad(cat,i) {
-        var voiture =document.getElementsByClassName(`${cat}`)
-        if (voi) {
-            
+    
+    cathegorie.forEach(cad) //luxe
+    function cad(cat,i) {   //luxe  1
+        
+        if (cat=search) {
+            var caseHtml=document.ge
         }
         
         voiture.style.display="block"
@@ -223,7 +218,7 @@ function affiche() {
         
     }
 }
-
+var voiture =document.getElementsByClassName(`${cat}`)
 var search=document.createElement("input");
 search.className="search";
 search.type="text";
