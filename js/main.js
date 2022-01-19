@@ -166,14 +166,13 @@ function createHTML(car,i) {
                     </br>
                     <p class="price">${car.price}</p>
                     </br>
-                    <button class="delete${car} close" onclick="annule(${i+1},cars)">x</button></div>`
+                    <button class="delete${car} close" onclick="annule(${i+1})">x</button></div>`
     
 }
 
 
 function annule(car,) {
-    var myDelete =document.getElementById(`car${car}`)
-    myDelete.remove();
+    document.getElementById("car"+car).remove();
     
 }
 
